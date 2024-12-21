@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Courses</title>
+</head>
+<body>
+<ul>
+    {% for course in objs %}
+        <li><a href="{% url 'courseRating:detail' course.id %}">{{ course.title }}</a></li>
+    {% endfor %}
+</ul>
+</body>
+</html>

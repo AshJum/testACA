@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+  <form action="{% url 'courseRating:register' %}" method="post">
+  {% csrf_token %}
+      <legend><h1>Register</h1></legend>
+      {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+      <label for="firstname">first name</label>
+      <input type="text" name="firstname" id="firstname" value=""><br>
+
+      <label for="lastname">last name</label>
+      <input type="text" name="lastname" id="lastname" value=""><br>
+
+      <label for="age">age</label>
+      <input type="number" name="age" id="age" value=""><br>
+
+      <label for="email">email</label>
+      <input type="text" name="email" id="email" value=""><br>
+
+      <label for="password">password</label>
+      <input type="password" name="password" id="password" value=""><br>
+
+      <label for="repeat_password">repeat password</label>
+      <input type="password" name="repeat_password" id="repeat_password" value=""><br>
+
+  <input type="submit" value="Register">
+  </form>
+
+
+<a href="login.html">login</a>
+</body>
+</html>

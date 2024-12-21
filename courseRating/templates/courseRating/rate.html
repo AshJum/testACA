@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rate</title>
+</head>
+<body>
+    <form action="{% url 'courseRating:rate' course.id %}" method="post">
+    {% csrf_token %}
+        <legend><h1>Rate</h1></legend>
+        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <label for="rate">rate</label>
+        <input type="number" name="rate" id="rate" value=""><br>
+
+    <input type="submit" value="Rate">
+    </form>
+<br>
+</body>
+</html>
